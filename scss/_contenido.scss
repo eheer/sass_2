@@ -1,0 +1,47 @@
+.centrar_linea{
+    text-align:center;
+}
+
+.logo{
+    width: $aalto-2;
+}
+
+.caja{   
+    @extend .centrar_linea;
+    background-color: white;
+   color: black;
+   padding: $pd-2;
+   border: 2px solid $fuente_negro;
+   font-size: 20px;
+   width: 50%;
+   margin-top: 10px;
+   margin-bottom: 10px;   
+   
+}
+
+
+
+@mixin modelo($ancho, $alto, $fuente, $fcolor, $fondo) {
+    width: $ancho;
+    height: $alto;
+    font-size: $fuente;
+    color: $fcolor;
+    background-color: $fondo;
+}
+
+
+.caja_h_cbz{
+    @extend .caja;
+    @include modelo (100%,50px,25px,red,black);
+    text-align: center;
+    padding: 0px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.proveedor_caja{
+    @extend .caja;
+    @include modelo(100px,100px,10px,white,white);
+    
+
+}
